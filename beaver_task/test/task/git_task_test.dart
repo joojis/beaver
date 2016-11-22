@@ -16,9 +16,9 @@ void main() {
   });
   test("The trailing options that appear after non-option arguments must not be parsed.", () {
     final json =
-        '{"name":"git","args":["--process-working-dir", ".", "push", "--force"]}';
+        '{"name":"git","args":["--process-working-dir", ".", "push", "--force", "origin"]}';
     final gitTask = new Task.fromJson(json) as GitTask;
     expect(gitTask.processWorkingDir, equals("."));
-    expect(gitTask.args, equals(["push", "--force"]));
+    expect(gitTask.args, equals(["push", "--force", "origin"]));
   });
 }
