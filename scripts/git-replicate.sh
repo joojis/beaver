@@ -29,8 +29,7 @@ for _CURRENT in $_COMMITS; do
     fi
     continue
   fi
-  git -C $_SOURCE_GIT_REPO_DIR push $_TARGET_GIT_ADDR $_CURRENT:refs/heads/master
-  sleep $_INTERVAL
+  git -C $_SOURCE_GIT_REPO_DIR push $_TARGET_GIT_ADDR $_CURRENT:refs/heads/master && sleep $_INTERVAL
 done
 
 if $_SKIP_FLAG; then
