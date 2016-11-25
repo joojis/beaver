@@ -6,8 +6,8 @@ if [ -z $1 ]; then
 fi
 
 _SOURCE_GIT_REPO_DIR=$1
-_SINCE="2015-03-23"
-_UNTIL="2015-04-22"
+_SINCE="2015-03-23T21:00:00+09:00"
+_UNTIL="2015-04-22T21:00:00+09:00"
 _TARGET_GIT_ADDR="git@github.com:fluidic/dartdoc.git"
 #_TARGET_GIT_ADDR="git@github.com:joojis/dartdoc.git"
 _INTERVAL=1m
