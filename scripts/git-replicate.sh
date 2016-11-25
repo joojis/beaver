@@ -19,7 +19,7 @@ _BASE_COMMIT=`echo $_COMMITS | awk '{print $1}'`
 # Uncomment the below line to force reset.
 # git -C $_SOURCE_GIT_REPO_DIR push -f $_TARGET_GIT_ADDR $_BASE_COMMIT:refs/heads/master
 
-_TARGET_CURRENT=`git ls-remote --heads $_TARGET_GIT_ADDR | awk '{print $1}'`
+_TARGET_CURRENT=`git ls-remote $_TARGET_GIT_ADDR refs/heads/master | awk '{print $1}'`
 
 _SKIP_FLAG=true
 for _CURRENT in $_COMMITS; do
